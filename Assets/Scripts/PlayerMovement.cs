@@ -72,11 +72,12 @@ public class PlayerMovement : MonoBehaviour
         
         //Aplicar a direção no verificar de movimentação
         isMoving = direction.magnitude;
-
+        int intMove = (int)isMoving;
         //Caso exista um controlador de animação
-        if(animator != null)
+        if (animator != null)
             //Animations
             animator.SetFloat("isMoving", isMoving);
+            //animator.SetInteger("intMove", intMove);
     }
 }
 
